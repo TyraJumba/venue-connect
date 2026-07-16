@@ -1,4 +1,4 @@
-# music_player
+# venue_connect
 
 A new Flutter project.
 
