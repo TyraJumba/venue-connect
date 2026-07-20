@@ -1,23 +1,26 @@
 import 'package:flutter/material.dart';
-import 'views/login.dart';
+import 'package:venue_connect/views/login.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
-  runApp(const VenueConnect());
+  runApp(const VenueConnectApp());
 }
 
-class VenueConnect extends StatelessWidget {
-  const VenueConnect({super.key});
+class VenueConnectApp extends StatefulWidget {
+  const VenueConnectApp({super.key});
 
   @override
+  State<VenueConnectApp> createState() => _VenueConnectAppState();
+}
+
+class _VenueConnectAppState extends State<VenueConnectApp> {
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Venue Connect',
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.lightBlue,
-        primaryColor: Colors.white,
-      ),
-      home: const LoginScreen(),
+      home: LoginScreen(),
+      initialRoute: "/",
+      getPages: [],
     );
   }
 }
