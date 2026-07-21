@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:venue_connect/views/login.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
-
+import 'package:venue_connect/configs/routes.dart';
+import 'package:get/get.dart';
 void main() {
   runApp(const VenueConnectApp());
 }
@@ -18,9 +17,8 @@ class _VenueConnectAppState extends State<VenueConnectApp> {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
       initialRoute: "/",
-      getPages: [],
+      getPages: routes,
     );
   }
 }

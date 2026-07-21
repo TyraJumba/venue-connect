@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:get/get.dart';
 import 'package:venue_connect/configs/colors.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -137,7 +136,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 TextButton(
                   onPressed: () {
-                    Get.toNamed("/register");
+                    Get.toNamed("/registration");
                   },
 
                   child: Text(
