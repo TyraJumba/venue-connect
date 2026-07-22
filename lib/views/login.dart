@@ -129,32 +129,31 @@ class _LoginScreenState extends State<LoginScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
 
               children: [
-
-                const Text(
-                  "Don't have an account?",
-                ),
-
-                TextButton(
-                  onPressed: () {
-                    Get.toNamed("/registration");
-                  },
-
-                  child: Text(
-                    "Sign Up",
-                    style: TextStyle(
-                      color: AppColors.primary,
-                      fontWeight: FontWeight.bold,
-                    ),
+                GestureDetector(
+                  child: const Text(
+                    "Don't have an account?",
                   ),
                 ),
-
+                  
+                    TextButton(
+                      onPressed: () {
+                        Get.toNamed("/registration");
+                      },
+                  
+                      child: Text(
+                        "Sign Up",
+                        style: TextStyle(
+                          color: AppColors.primary,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
-
-          ],
         ),
       ),
-    ),
-   );
+    );
   }
 }
